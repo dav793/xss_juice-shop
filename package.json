@@ -1,0 +1,25 @@
+{
+  "name": "xss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && concurrently --kill-others \"tsc --watch\" \"nodemon dist/wserver.js\"",
+    "serve": "node dist/wserver.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "body-parser": "1.20.1",
+    "cors": "2.8.5",
+    "express": "4.18.2",
+    "morgan": "1.10.0",
+    "typescript": "4.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.9",
+    "concurrently": "7.1.0",
+    "nodemon": "2.0.20"
+  },
+  "author": "",
+  "license": "ISC"
+}
